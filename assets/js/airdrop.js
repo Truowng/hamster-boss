@@ -36,7 +36,13 @@ const toastFailed = {
 const toastNoWallet = {
   title: "no wallet found",
   content: "Please enter your wallet.",
-  img: "./assets/images/failed.svg",
+  img: "./assets/images/error.svg",
+};
+const toastWaiting = {
+  title: "Notification",
+  content:
+    "The airdrop event is currently live. Check your wallet after the event ends to see if you won.",
+  img: "./assets/images/noti.svg",
 };
 
 const input = document.querySelector(".check-wallet .input-wrapper input");
@@ -52,20 +58,25 @@ const checkWallet = () => {
   const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLive);
   const time = toastLive.getAttribute("data-bs-delay");
   toastLine.style.animation = `countDown linear ${time - 50}ms forwards`;
-  if (value == "") {
-    toastImg.setAttribute("src", toastNoWallet.img);
-    toastTitle.innerHTML = toastNoWallet.title;
-    toastContent.innerHTML = toastNoWallet.content;
-    toastBootstrap.show();
-  } else if (WALLETS.includes(value)) {
-    toastImg.setAttribute("src", toastSuccess.img);
-    toastTitle.innerHTML = toastSuccess.title;
-    toastContent.innerHTML = toastSuccess.content;
-    toastBootstrap.show();
-  } else {
-    toastImg.setAttribute("src", toastFailed.img);
-    toastTitle.innerHTML = toastFailed.title;
-    toastContent.innerHTML = toastFailed.content;
-    toastBootstrap.show();
-  }
+
+  toastImg.setAttribute("src", toastWaiting.img);
+  toastTitle.innerHTML = toastWaiting.title;
+  toastContent.innerHTML = toastWaiting.content;
+  toastBootstrap.show();
+  //   if (value == "") {
+  //     toastImg.setAttribute("src", toastNoWallet.img);
+  //     toastTitle.innerHTML = toastNoWallet.title;
+  //     toastContent.innerHTML = toastNoWallet.content;
+  //     toastBootstrap.show();
+  //   } else if (WALLETS.includes(value)) {
+  //     toastImg.setAttribute("src", toastSuccess.img);
+  //     toastTitle.innerHTML = toastSuccess.title;
+  //     toastContent.innerHTML = toastSuccess.content;
+  //     toastBootstrap.show();
+  //   } else {
+  //     toastImg.setAttribute("src", toastFailed.img);
+  //     toastTitle.innerHTML = toastFailed.title;
+  //     toastContent.innerHTML = toastFailed.content;
+  //     toastBootstrap.show();
+  //   }
 };
