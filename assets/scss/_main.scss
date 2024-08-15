@@ -239,6 +239,29 @@ img {
   }
 }
 
+#claim {
+  .modal-content {
+    background: $blue-2;
+    height: 175px;
+  }
+  .modal-body {
+    text-align: center;
+    font-size: 25px;
+    @include flex(center, center, unset);
+  }
+
+  .modal-footer {
+    border-top: none;
+    @include flex(center, center, unset);
+    button {
+      background: $white;
+      color: $black;
+      outline: none;
+      border: none;
+    }
+  }
+}
+
 #banner {
   @include flex(space-between, center, unset);
 

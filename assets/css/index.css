@@ -294,6 +294,32 @@ img {
   display: none;
 }
 
+#claim .modal-content {
+  background: #50a6db;
+  height: 175px;
+}
+#claim .modal-body {
+  text-align: center;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: unset;
+}
+#claim .modal-footer {
+  border-top: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: unset;
+}
+#claim .modal-footer button {
+  background: #fff;
+  color: #000;
+  outline: none;
+  border: none;
+}
+
 #banner {
   display: flex;
   justify-content: space-between;

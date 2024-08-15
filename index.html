@@ -16,6 +16,37 @@
     <title>Hamster Boss</title>
   </head>
   <body>
+    <div
+      class="modal fade"
+      id="claim"
+      tabindex="-1"
+      aria-labelledby="claimLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- <div class="modal-header">
+            <h1 class="modal-title fs-5" id="claimLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div> -->
+          <div class="modal-body">Coming Soon...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <header id="header">
       <div class="container">
         <div class="header-wrapper">
@@ -81,7 +112,13 @@
               <h1 class="title">The World Of Mafia</h1>
               <p class="desc">CA: Coming Soon</p>
               <div class="button-wrapper">
-                <a href="#" target="_blank" class="link-button">Getgems</a>
+                <a
+                  href="#"
+                  class="link-button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#claim"
+                  >Claim</a
+                >
                 <a href="airdrop.html" target="_blank" class="link-button"
                   >Check Airdrop</a
                 >
